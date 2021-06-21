@@ -1,8 +1,15 @@
 [package]
-name = "check-suite"
-version = "0.1.0"
+name = "check-tls-suites"
+version = "0.0.1+alpha"
 authors = ["Anthony J. Martinez <anthony@ajmartinez.com>"]
 edition = "2018"
+license = "MIT or Apache-2.0"
+readme = "README.md"
+homepage = "https://git.staart.one/ajmartinez/check-tls-suites"
+repository = "https://git.staart.one/ajmartinez/check-tls-suites.git"
+description = "Displays TLS cipher suite names and recommendation status from IANA for a given cipher suites hex stream"
+keywords = ["network", "CLI", "tools"]
+categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
