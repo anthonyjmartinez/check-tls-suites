@@ -8,7 +8,7 @@ Provides list of TLS suite names and recommendation status per IANA given either
 ## Options
 ```
 check-tls-suites -h
-Check TLS Suites 0.1.5
+Check TLS Suites 0.1.6
 Anthony J. Martinez <anthony@ajmartinez.com>
 Displays TLS cipher suite names and recommendation status from IANA for a set of given ciphers
 
@@ -151,3 +151,7 @@ at your option.
 Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any
 additional terms or conditions.
+
+### Contact
+
+To discuss features, offer assistance, or get help please join the project's [Matrix room](https://matrix.to/#/#check-tls-suites:txrx.staart.one).
