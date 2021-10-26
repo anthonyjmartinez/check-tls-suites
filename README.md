@@ -8,7 +8,7 @@ Provides list of TLS suite names and recommendation status per IANA given either
 ## Options
 ```
 check-tls-suites -h
-Check TLS Suites 0.1.6
+Check TLS Suites 0.1.7
 Anthony J. Martinez <anthony@ajmartinez.com>
 Displays TLS cipher suite names and recommendation status from IANA for a set of given ciphers
 
