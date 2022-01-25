@@ -61,14 +61,16 @@ impl StatusMap {
     }
 
     fn recommended(&self, key: Vec<u8>) {
+	let hex_key = hex::encode_upper(&key);
 	if let Some(status) = self.map.get(&key) {
+	    let status_name = &status.name;
 	    if status.rec {
-		println!("Cipher suite '{}, (0x{})' is recommended for use.", status.name, hex::encode_upper(key));
+		println!("Cipher suite '{status_name}, (0x{hex_key})' is recommended for use.");
 	    } else {
-		println!("!Cipher suite '{} (0x{})' is NOT recommended for use!", status.name, hex::encode_upper(key));
+		println!("!Cipher suite '{status_name} (0x{hex_key})' is NOT recommended for use!");
 	    }
 	} else {
-	    println!("Unknown cipher spec: {}", hex::encode_upper(key))
+	    println!("Unknown cipher spec: {hex_key}")
 	}
     }
 
@@ -80,7 +82,7 @@ impl StatusMap {
 	    }
 	    Ok(())
 	} else {
-	    Err(anyhow!("Invalid hex stream: {}", hstream))
+	    Err(anyhow!("Invalid hex stream: {hstream}"))
 	}
     }
 
@@ -93,13 +95,14 @@ impl StatusMap {
 	    let spec_hex: String;
 
 	    if spec_int < 16 {
-		spec_hex = format!("0{:X}", spec_int);
+		spec_hex = format!("0{spec_int:X}");
 	    } else {
-		spec_hex = format!("{:X}", spec_int);
+		spec_hex = format!("{spec_int:X}");
 	    }
 
 	    let mut hex_val = hex::decode(&spec_hex)
-		.with_context(|| format!("Failed on: {}, int: {}", &spec_hex, spec_int))?;
+		.with_context(|| format!("Failed on: {spec_hex}, int: {spec_int}"))?;
+
 	    if hex_val.len() < 2 {
 		val.append(&mut hex_val);
 	    } else {

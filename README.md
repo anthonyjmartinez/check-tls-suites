@@ -137,6 +137,10 @@ Cipher suite 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, (0x009E)' is recommended for 
 !Cipher suite 'TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00FF)' is NOT recommended for use!
 ```
 
+### Minimum Supported Rust Verion
+
+Rust 1.58 is the MSRV for this crate.
+
 ### License
 
 Licensed under either of
