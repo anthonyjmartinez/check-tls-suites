@@ -1,6 +1,6 @@
 [package]
 name = "check-tls-suites"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Anthony J. Martinez <anthony@ajmartinez.com>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
@@ -15,7 +15,7 @@ categories = ["command-line-utilities"]
 
 [dependencies]
 anyhow = "1.0"
-clap = "2"
+clap = { version = "3", features = ["cargo"] }
 csv = "1.1"
 hex = "0.4"
 reqwest = { version = "0.11", features = ["blocking"] }
@@ -25,3 +25,4 @@ serde = { version = "1", features = ["derive"] }
 panic = "abort"
 lto = true
 opt-level = 'z'
+strip = true
