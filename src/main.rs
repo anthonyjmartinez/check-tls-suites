@@ -28,7 +28,7 @@ fn args() -> Command<'static> {
              .help("Path to the IANA TLS parameters CSV")
              .required_unless_present("from_web"))
         .arg(Arg::new("from_web")
-             .short('f')
+             .short('w')
              .takes_value(false)
              .help("Download the IANA TLS parameters CSV from https://www.iana.org/assignments/tls-parameters/tls-parameters-4.csv")
              .required_unless_present("from_file"))
