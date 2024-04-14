@@ -1,12 +1,12 @@
 [package]
 name = "check-tls-suites"
-version = "0.3.1"
+version = "0.3.2"
 authors = ["Anthony J. Martinez <anthony@ajmartinez.com>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
-homepage = "https://git.staart.one/ajmartinez/check-tls-suites"
-repository = "https://git.staart.one/ajmartinez/check-tls-suites.git"
+homepage = "https://github.com/anthonyjmartinez/check-tls-suites"
+repository = "https://github.com/anthonyjmartinez/check-tls-suites.git"
 description = "Displays TLS cipher suite names and recommendation status from IANA for a set of given ciphers"
 keywords = ["network", "CLI", "tools"]
 categories = ["command-line-utilities"]
